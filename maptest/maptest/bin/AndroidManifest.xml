@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.maptest"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+    <uses-feature android:required="true" android:glEsVersion="0x00020000"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+      <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+<uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+ <!-- The following two permissions are not required to use     
+Google Maps Android API v2, but are recommended. --> 
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/> 
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+    <application
+        android:name=".MaptestApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/icon5"
+        android:label="Seoul Scout"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.maptest.MainActivity"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:label="서울 스카우트" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+		
+			android:theme="@android:style/Theme.NoTitleBar"
+			android:name="com.example.maptest.FlashActivity">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN"></action>
+				<category android:name="android.intent.category.LAUNCHER"></category>
+			</intent-filter>
+		</activity>
+        <meta-data     android:name="com.google.android.gms.version"     android:value="@integer/google_play_services_version" /> 
+        <meta-data     android:name="com.google.android.maps.v2.API_KEY"     android:value="AIzaSyCMxuHfF8sgDTAO9dhQQpotQe6jq6tyGbI"/> 
+    </application>
+
+</manifest>
